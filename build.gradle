@@ -1,5 +1,5 @@
 group 'hr.bytecode'
-version '1.0-SNAPSHOT'
+version '0.0.1'
 
 buildscript {
     repositories {
@@ -31,7 +31,7 @@ targetCompatibility = 1.8
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.11'
     compile 'org.springframework.boot:spring-boot-starter-web'
-    runtime 'ch.qos.logback:logback-access:LATEST'
+    runtime 'ch.qos.logback:logback-classic:1.1.7'
     testCompile "org.spockframework:spock-core:1.0-groovy-2.3"
     testCompile 'org.spockframework:spock-spring:1.0-groovy-2.3'
 
