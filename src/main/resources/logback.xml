@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender class="ch.qos.logback.core.ConsoleAppender" name="STDOUT">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <outputPatternAsHeader>false</outputPatternAsHeader>
+        </encoder>
+    </appender>
+
+    <logger name="hr.bytecode" level="INFO"/>
+    <logger name="org.springframework" level="INFO"/>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
