@@ -4,9 +4,12 @@ version '0.0.1'
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE")
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE'
+        classpath 'net.saliman:gradle-cobertura-plugin:2.3.1'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.7.1'
     }
 }
 
@@ -15,6 +18,10 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'cobertura'
+apply plugin: 'com.github.kt3k.coveralls'
+
+cobertura.coverageFormats = ['html', 'xml']
 
 jar {
     baseName = 'voices-service'

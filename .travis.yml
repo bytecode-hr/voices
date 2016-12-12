@@ -11,4 +11,4 @@ cache:
     - $HOME/.gradle/wrapper/
 
 script:
- - gradle clean build
+ - gradle clean build cobertura coveralls
